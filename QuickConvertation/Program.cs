@@ -18,7 +18,8 @@ namespace QuickConvertation
 
         static List<byte> NumberStrToByteList(string str)
         {
-            return Array.ConvertAll(str.ToCharArray(), r => Convert.ToByte(Int16.Parse(r.ToString()))).ToList();
+            //return Array.ConvertAll(str.ToCharArray(), r => Convert.ToByte(Int16.Parse(r.ToString()))).ToList();
+            return (str.ToCharArray().ToList()).ConvertAll(r => Convert.ToByte(Int16.Parse(r.ToString())));
         }
     }
 }
